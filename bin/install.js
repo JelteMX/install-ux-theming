@@ -132,7 +132,7 @@ const clearFolder = async () => {
 }
 
 const clearNodeModules = () => new Promise((resolve, reject) => {
-    if (fs.existsSync(PATHS.node_modules)) {
+    if (fs.existsSync(PATHS.node_modules) && INSTALL) {
         try {
             fs.rm(PATHS.node_modules, { force: true, recursive: true }, () => {
                 resolve();

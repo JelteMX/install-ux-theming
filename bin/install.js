@@ -6,6 +6,7 @@ const path = require("path");
 const chalk = require("chalk");
 const got = require("got");
 const unzipper = require("unzipper");
+const pkg = require("../package.json");
 
 const cwd = process.cwd();
 const args = process.argv;
@@ -29,7 +30,7 @@ const BASIC_OPTIONS = {
 
 const BANNER = [
     '',
-    ` ==== INSTALL UX THEMING FOR MENDIX ====`,
+    ` ==== INSTALL UX THEMING FOR MENDIX (v${pkg.version}) ====`,
     ``
 ].join('\n');
 const ID = chalk.green('[INSTALL-UX-THEMING]');
